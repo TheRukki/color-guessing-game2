@@ -14,7 +14,6 @@ function App() {
     setScore(0);
     setGameStatus("");
     generateRandomColors();
-    playMusic();
   };
 
   const generateRandomColors = () => {
