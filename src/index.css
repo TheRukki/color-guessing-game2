@@ -1,0 +1,211 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  padding: 30px;
+  background: linear-gradient(145deg, #4e5b7e, #2e3a53);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  animation: fadeIn 0.5s ease-out; /* Quick fade-in effect */
+}
+
+h1 {
+  font-size: 45px;
+  color: #ff8c00;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+p {
+  font-size: 20px;
+  margin: 10px 0;
+  font-weight: 300;
+}
+
+/* Color Box (For Target Color) */
+#colorBox {
+  width: 120px;
+  height: 120px;
+  margin: 20px auto;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  transition: all 0.2s ease; /* Faster transition */
+  animation: bounceIn 0.5s ease-out; /* Quick bounce-in effect */
+}
+
+/* Color Options */
+#colorOptions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+#colorOptions button {
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease; /* Faster hover transition */
+  animation: pulse 1s infinite; /* Quick pulse effect */
+}
+
+#colorOptions button:hover {
+  transform: scale(1.2); /* Faster hover scale effect */
+  box-shadow: 0px 0px 15px rgba(255, 140, 0, 0.5);
+}
+
+#colorOptions button:focus {
+  outline: none;
+  box-shadow: 0px 0px 15px rgba(255, 140, 0, 1);
+}
+
+/* Score and Message */
+#score {
+  font-size: 28px;
+  margin-top: 20px;
+  color: #ff8c00;
+  animation: fadeIn 0.5s ease-out; /* Quick fade-in effect */
+}
+
+#newGameButton {
+  font-size: 20px;
+  padding: 15px 25px;
+  background-color: #ff8c00;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: all 0.2s ease; /* Faster button transition */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#newGameButton:hover {
+  background-color: #ffa500;
+  transform: translateY(-3px); /* Slightly faster hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Music Control Modal */
+.music-modal {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  border-radius: 12px;
+  color: white;
+  z-index: 999;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 0.3s ease-out; /* Quick fade-in effect */
+}
+
+.music-modal .pause-button {
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px 20px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.music-modal .pause-button:hover {
+  background-color: #ffa500;
+  transform: translateY(-2px); /* Slightly faster hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Retro Animation (Subtle Glow) */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Bounce-in Animation for Color Box */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  #colorBox {
+    width: 100px;
+    height: 100px;
+  }
+
+  #colorOptions button {
+    width: 60px;
+    height: 60px;
+  }
+
+  #score {
+    font-size: 22px;
+  }
+
+  #newGameButton {
+    font-size: 18px;
+    padding: 12px 20px;
+  }
+
+  .music-modal {
+    font-size: 14px;
+    padding: 8px;
+  }
+} )
